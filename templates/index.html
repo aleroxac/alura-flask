@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block content %}
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Platform</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for game in games %}
+                <tr>
+                    <td>{{ game.title }}</td>
+                    <td>{{ game.genre }}</td>
+                    <td>{{ game.platform }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
